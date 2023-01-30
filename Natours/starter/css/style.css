@@ -17,9 +17,34 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: rgb(38, 71, 170);
+  color: rgb(0, 3, 10);
+  padding: 30px;
 }
 .header {
-  height: 95vh;
+  height: 100vh;
   background-color: aliceblue;
+  background-image: linear-gradient(to right bottom, #7ed56fa7, #55c57aa5),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  font-size: large;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100vh);
+  text-align: center;
+}
+.border-box {
+  height: 100px;
+  width: 500px;
+  background-color: rgb(62, 170, 176);
+  box-sizing: border-box;
+  border: rgb(136, 20, 62);
+  border-width: 1rem;
+  padding: 5px;
+}
+.content-box {
+  height: 100px;
+  width: 500px;
+  background-color: rgb(23, 221, 20);
+  padding: 15px;
+  border: rgb(136, 20, 62);
+  border-width: 1rem;
 }
