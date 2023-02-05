@@ -17,20 +17,109 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: rgb(0, 3, 10);
-  padding: 30px;
+  color: #777;
+  padding: 4vh;
 }
 .header {
   height: 100vh;
   background-color: aliceblue;
-  background-image: linear-gradient(to right bottom, #7ed56fa7, #55c57aa5),
+  background-image: linear-gradient(to right bottom, #7ed56fa7, #28b485a3),
     url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   font-size: large;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100vh);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 95vh);
   text-align: center;
+
+  position: relative;
 }
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 40px;
+  animation: moveInTop 2s ease-in;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+
+  backface-visibility: hidden;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+
+  animation-name: moveInLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 17px;
+
+  animation: moveInRight 2s ease-in;
+}
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(10vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(30vh);
+  }
+
+  80% {
+    transform: translateX(-5vh);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-30vh);
+  }
+  80% {
+    transform: translateX(5vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 .border-box {
   height: 100px;
   width: 500px;
@@ -38,7 +127,6 @@ body {
   box-sizing: border-box;
   border: rgb(136, 20, 62);
   border-width: 1rem;
-  padding: 5px;
 }
 .content-box {
   height: 100px;
@@ -47,4 +135,26 @@ body {
   padding: 15px;
   border: rgb(136, 20, 62);
   border-width: 1rem;
+}
+
+/* .btn {
+  text-transform: uppercase; 
+border-radius: 100%; 
+ font-size: 30px;
+  font-weight: 400;
+  padding: 20px;
+  color: black;
+  background-color: #fff;
+} */
+
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+}
+
+.btn-white {
+  background-color: white;
+  color: #777;
 }
